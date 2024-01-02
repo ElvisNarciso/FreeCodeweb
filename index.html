@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
+    <title>Meu form</title>
+  </head>
+  <body>
+    <section>
+        <h1 id="title">Meu formulário</h1>
+    <p id="description">Obrigado por nos ajudar a melhorar a plataforma</p>
+    </section>
+    
+    <form id="survey-form">
+      <label id="name-label">
+        Name: <input id="name" type="text" placeholder="Seu nome aqui" required></input>
+      </label>
+      <label id="email-label">
+        Email: <input id="email" type="email" placeholder="Seu email aqui" required></input>
+      </label>
+      <label id="number-label">
+        Idade: (Opcional) <input id="number" type="number" min="13" max="99" placeholder="Idade" required></input>
+      </label>
+      <p class="ident">Atualmente qual o seu emprego atual?</p>
+      <select id="dropdown">
+        <option value="0">(selecione aqui)</option>
+        <option value="1">Opção 1</option>
+        <option value="2">Opção 2</option>
+      </select>
+    
+      
+      <label name="radios-button" id="radios-button">
+        <p class="ident">Você recomendaria a nossa empresa a um amigo?</p>
+      Sim <input class="dg" type="radio" name="mesmo" value="9"></input>
+      Não <input class="dg" type="radio" name="mesmo" value="8"></input>
+      </label>
+      <label class="checkbox">
+        <p class="ident">Qual melhoria gostaria de ver? <br> (Marque o que se aplicar)</p>
+        <label for="checkbox" >
+            <input type="checkbox" class="dg" value="4"></input> Front-end Projects
+        </label>
+        <label for="checkbox" >
+            <input type="checkbox" class="dg" value="5"></input> Back-end Projects
+        </label>
+        <label for="checkbox">
+            <input type="checkbox" class="dg" value="6"></input> Fullstack Projects
+        </label>
+      </label>
+      <p class="ident">Algum comentario ou sugestão?</p>
+      <textarea name="textarea" placeholder="Escreva seu comentario aqui..."></textarea>
+      <input id="submit" type="submit"></input>
+    </form>
+    <footer>
+        <p id="base">Desenvolvido por <a target="_blank" href="https://www.linkedin.com/in/elvislimacdn/">Elvis Narciso</a> | 2023 ©</p>
+    </footer>
+  </body>
+</html>
