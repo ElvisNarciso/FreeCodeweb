@@ -1,60 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Adicionando Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
-    
     <title>Meu form</title>
-  </head>
-  <body>
-    <section>
-        <h1 id="title">Meu formulário</h1>
-    <p id="description">Obrigado por nos ajudar a melhorar a plataforma</p>
+</head>
+<body>
+    <section class="container">
+        <h1 id="title" class="mt-5">Meu formulário</h1>
+        <p id="description">Obrigado por nos ajudar a melhorar a plataforma</p>
     </section>
     
-    <form id="survey-form">
-      <label id="name-label">
-        Name: <input id="name" type="text" placeholder="Seu nome aqui" required></input>
-      </label>
-      <label id="email-label">
-        Email: <input id="email" type="email" placeholder="Seu email aqui" required></input>
-      </label>
-      <label id="number-label">
-        Idade: (Opcional) <input id="number" type="number" min="13" max="99" placeholder="Idade" required></input>
-      </label>
-      <p class="ident">Atualmente qual o seu emprego atual?</p>
-      <select id="dropdown">
-        <option value="0">(selecione aqui)</option>
-        <option value="1">Opção 1</option>
-        <option value="2">Opção 2</option>
-      </select>
-    
+    <form id="survey-form" class="container mt-3">
+        <div class="form-group">
+            <label id="name-label" for="name">Nome:</label>
+            <input id="name" type="text" class="form-control" placeholder="Seu nome aqui" required>
+        </div>
+        <div class="form-group">
+            <label id="email-label" for="email">Email:</label>
+            <input id="email" type="email" class="form-control" placeholder="Seu email aqui" required>
+        </div>
+        <div class="form-group">
+            <label id="number-label" for="number">Idade: (Opcional)</label>
+            <input id="number" type="number" class="form-control" min="13" max="99" placeholder="Idade">
+        </div>
+        <div class="form-group">
+            <label for="dropdown">Atualmente qual o seu emprego atual?</label>
+            <select id="dropdown" class="form-control">
+                <option value="0">(selecione aqui)</option>
+                <option value="1">Opção 1</option>
+                <option value="2">Opção 2</option>
+            </select>
+        </div>
       
-      <label name="radios-button" id="radios-button">
-        <p class="ident">Você recomendaria a nossa empresa a um amigo?</p>
-      Sim <input class="dg" type="radio" name="mesmo" value="9"></input>
-      Não <input class="dg" type="radio" name="mesmo" value="8"></input>
-      </label>
-      <label class="checkbox">
-        <p class="ident">Qual melhoria gostaria de ver? <br> (Marque o que se aplicar)</p>
-        <label for="checkbox" >
-            <input type="checkbox" class="dg" value="4"></input> Front-end Projects
-        </label>
-        <label for="checkbox" >
-            <input type="checkbox" class="dg" value="5"></input> Back-end Projects
-        </label>
-        <label for="checkbox">
-            <input type="checkbox" class="dg" value="6"></input> Fullstack Projects
-        </label>
-      </label>
-      <p class="ident">Algum comentario ou sugestão?</p>
-      <textarea name="textarea" placeholder="Escreva seu comentario aqui..."></textarea>
-      <input id="submit" type="submit"></input>
+        <div class="form-group">
+            <p class="ident">Você recomendaria a nossa empresa a um amigo?</p>
+            <div class="custom-control custom-radio">
+                <input type="radio" id="recomendaSim" name="recomenda" class="custom-control-input" value="9">
+                <label class="custom-control-label" for="recomendaSim">Sim</label>
+            </div>
+            <div class="custom-control custom-radio">
+                <input type="radio" id="recomendaNao" name="recomenda" class="custom-control-input" value="8">
+                <label class="custom-control-label" for="recomendaNao">Não</label>
+            </div>
+        </div>
+      
+        <div class="form-group">
+            <p class="ident">Qual melhoria gostaria de ver? <br> (Marque o que se aplicar)</p>
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="frontEnd" value="4">
+                <label class="custom-control-label" for="frontEnd">Front-end Projects</label>
+            </div>
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="backEnd" value="5">
+                <label class="custom-control-label" for="backEnd">Back-end Projects</label>
+            </div>
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="fullstack" value="6">
+                <label class="custom-control-label" for="fullstack">Fullstack Projects</label>
+            </div>
+        </div>
+      
+        <div class="form-group">
+            <p class="ident">Algum comentario ou sugestão?</p>
+            <textarea id="comments" class="form-control" name="textarea" placeholder="Escreva seu comentario aqui..."></textarea>
+        </div>
+        <button id="submit" type="submit" class="btn btn-primary">Enviar</button>
     </form>
-    <footer>
+    
+    <footer class="container mt-3">
         <p id="base">Desenvolvido por <a target="_blank" href="https://www.linkedin.com/in/elvislimacdn/">Elvis Narciso</a> | 2023 ©</p>
     </footer>
-  </body>
+    
+    <!-- Adicionando Bootstrap JS e jQuery (necessários para alguns recursos do Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
 </html>
